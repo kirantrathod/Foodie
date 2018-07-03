@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Hotel_signup">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/name_inputlayout"
+        style="@style/Widget.TextInputLayout"
+        android:layout_marginTop="68dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/Nameofhotel"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:hint="@string/enter_name_of_your_hotel"
+            android:textColorHint="@android:color/black"/>
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:id="@+id/emailinputlayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_inputlayout">
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="@string/email"
+            android:padding="5dp"
+            android:background="@drawable/input_outline"
+            android:textColorHint="@android:color/black"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:textColor="@android:color/black" />
+
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:id="@+id/passwordlayout"
+        app:layout_constraintTop_toBottomOf="@+id/emailinputlayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/passwordedittext"
+            android:layout_width="220dp"
+            android:inputType="textPassword"
+            android:hint="@string/password_hint"
+            android:maxLines="1"
+            android:textColorHint="@android:color/black"
+            android:layout_height="wrap_content"
+             />
+    </android.support.design.widget.TextInputLayout>
+  <!--  <android.support.design.widget.TextInputLayout
+        style="@style/Widget.TextInputLayout"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/passwordlayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:hint="" />
+    </android.support.design.widget.TextInputLayout>   -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/category"
+        android:layout_marginTop="16dp"
+        android:id="@+id/category"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.251"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordlayout" />
+
+    <AutoCompleteTextView
+        android:layout_width="210dp"
+        android:layout_height="40dp"
+        android:hint="@string/veg_or_non_veg"
+        android:layout_marginTop="10dp"
+        android:id="@+id/choosecategory"
+        android:background="@drawable/input_outline"
+        android:padding="5dp"
+        android:maxLines="1"
+        android:textColorHint="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/category"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:id="@+id/signuphotel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/my_button"
+        android:text="@string/sign_up_label"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/choosecategory"/>
+
+</android.support.constraint.ConstraintLayout>

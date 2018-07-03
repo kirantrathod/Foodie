@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    tools:context=".show_menu_to_owner">
+   <!-- <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vegiterian Menu:"
+        android:padding="10dp"
+        android:id="@+id/tetxtviewnonveg"
+        android:textColor="@android:color/black"
+        android:textStyle="italic"
+        android:textSize="18sp"/> -->
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerviewmenu_veg"
+        >
+
+
+    </android.support.v7.widget.RecyclerView>
+
+ <!--   <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Non-Vegiterian Menu:"
+        android:textStyle="italic"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:id="@+id/textviewveg"
+        android:layout_below="@+id/recyclerviewmenu_veg"/> -->
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerviewmenu_nonveg"
+        android:layout_below="@id/recyclerviewmenu_veg"/>
+</LinearLayout>

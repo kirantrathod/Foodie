@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.kiran.foodie">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:gravity="center"
+        android:label="@string/app_name"
+        android:icon="@mipmap/foodie"
+        android:roundIcon="@mipmap/foodie"
+        android:supportsRtl="true"
+        android:textColor="@android:color/black"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".MainActivity"
+            android:gravity="center"
+            android:label="Foodie"
+            android:screenOrientation="portrait"
+            android:textColor="@android:color/black"
+            android:theme="@style/MyTheme19">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoginActivity" />
+        <activity
+            android:name=".Hotel_login"
+            android:parentActivityName=".LoginActivity"
+            android:theme="@style/MyTheme19" />
+        <activity
+            android:name=".WelcomeHotelOwners"
+            android:theme="@style/MyTheme19" />
+        <activity
+            android:name=".Hotel_signup"
+            android:theme="@style/MyTheme19" />
+        <activity
+            android:name=".Menu_or_Review"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Menu"
+            android:label="Menu"
+            android:parentActivityName=".Menu_or_Review"
+            android:theme="@style/MyTheme19" />
+        <activity
+            android:name=".Feedback"
+            android:label="Feeback"
+            android:parentActivityName=".Menu_or_Review"
+            android:theme="@style/MyTheme19" />
+        <activity
+            android:name=".Reply_reviews"
+            android:theme="@style/MyTheme19" />
+        <activity
+            android:name=".Enter_menu"
+            android:theme="@style/MyTheme19" />
+        <activity
+            android:name=".show_menu_to_owner"
+            android:theme="@style/MyTheme19" />
+        <activity android:name=".Customer_profile"></activity>
+    </application>
+
+</manifest>

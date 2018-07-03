@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    tools:background="@color/color_sign_up"
+    xmlns:tools="http://schemas.android.com/tools">
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline"
+        app:layout_constraintGuide_begin="48dp"
+        android:orientation="horizontal" />
+
+    <View
+        android:id="@+id/logo"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="64dp"
+        android:layout_height="64dp"/>
+
+    <android.support.design.widget.TextInputLayout
+        style="@style/Widget.TextInputLayout"
+        android:id="@+id/email_input"
+        android:layout_marginTop="48dp"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+        <android.support.design.widget.TextInputEditText
+            style="@style/Widget.TextEdit"
+            android:id="@+id/email_input_edit"
+            android:hint="@string/email_hint"
+            android:inputType="textEmailAddress" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        style="@style/Widget.TextInputLayout"
+        android:id="@+id/password_input"
+        app:layout_constraintTop_toBottomOf="@+id/email_input"
+        android:layout_marginTop="16dp"
+        app:passwordToggleTint="@color/color_input_hint"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+        <android.support.design.widget.TextInputEditText
+            style="@style/Widget.TextEdit"
+            android:id="@+id/password_input_edit"
+            android:hint="@string/password_hint"
+            android:inputType="textPassword" />
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Category:"
+        android:textColor="@android:color/white"
+        app:layout_constraintHorizontal_bias="0.197"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_input" />
+
+    <AutoCompleteTextView
+        android:id="@+id/autocomplete_gender"
+        android:layout_width="210dp"
+        android:layout_height="40dp"
+        android:background="@drawable/input_outline"
+        android:hint="Veg or Non-Veg"
+        android:maxLines="1"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/category"
+        tools:ignore="Deprecated,HardcodedText,LabelFor" />
+    <Button
+        android:id="@+id/btn_signup"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:textStyle="bold"
+        android:background="@drawable/my_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="HardcodedText,MissingConstraints"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/autocomplete_gender" />
+
+    <com.example.kiran.foodie.VerticalTextView
+        android:id="@+id/caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="@dimen/unfolded_size"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="@color/color_label"
+        android:text="@string/New_User"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.849"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="8dp" />
+
+</android.support.constraint.ConstraintLayout>
