@@ -11,5 +11,5 @@ Foodie is a hotel menu showing and reviewing android application for making more
 
 ## Credits
 
-Inspired by [Yaroslav Zubkov's](https://www.uplabs.com/posts/7-2-log-in-sign-up) and [thevpaliy's]https://github.com/thevpaliy/LoginConcept)
+Inspired by [Yaroslav Zubkov's](https://www.uplabs.com/posts/7-2-log-in-sign-up) and [thevpaliy's](https://github.com/thevpaliy/LoginConcept)
 
